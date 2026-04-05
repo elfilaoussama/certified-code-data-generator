@@ -33,7 +33,7 @@ Note: if proof-capable native solver binaries are not available, `--details` / `
 
 First run (or after changing AlloyInEcore core code):
 
-### Linux / macOS / WSL
+### Linux (Bash)
 
 ```bash
 cd VerificationEnvironment
