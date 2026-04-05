@@ -1,4 +1,4 @@
-# Pipeline Orchestrator (Linux)
+# Pipeline Orchestrator
 
 This module provides a small, **parameterized** CLI that orchestrates the existing pipeline:
 
