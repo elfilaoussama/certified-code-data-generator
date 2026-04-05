@@ -1,0 +1,28 @@
+# Maven / Java build
+**/target/
+**/*.class
+
+# Logs
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# IntelliJ
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Node (vendored repos may include JS tooling)
+**/node_modules/
+
+# Python
+__pycache__/
+*.pyc
+
+# Dataset / pipeline outputs (keep if you want them versioned)
+# pipeline-output/
+# **/output/
