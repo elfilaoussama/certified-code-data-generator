@@ -13,8 +13,8 @@ If you’re new here and just want “run the pipeline and get a `report.json`�
 - [alloy-in-ecore-java-verification/](alloy-in-ecore-java-verification/) — AlloyInEcore + Kodkod verifier.
   - Verifier CLI: [alloy-in-ecore-java-verification/VerificationEnvironment/](alloy-in-ecore-java-verification/VerificationEnvironment/)
   - Verifier README: [alloy-in-ecore-java-verification/VerificationEnvironment/README.md](alloy-in-ecore-java-verification/VerificationEnvironment/README.md)
-- [skeleton_generator/](skeleton_generator/) — Alloy Analyzer based *instance generator* (synthetic skeleton datasets).
-  - README: [skeleton_generator/README.md](skeleton_generator/README.md)
+- [skeleton-generator/](skeleton-generator/) — Alloy Analyzer based *instance generator* (synthetic skeleton datasets).
+  - README: [skeleton-generator/README.md](skeleton-generator/README.md)
 
 ## How the verification pipeline works
 
