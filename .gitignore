@@ -23,6 +23,13 @@ Thumbs.db
 __pycache__/
 *.pyc
 
-# Dataset / pipeline outputs (keep if you want them versioned)
-# pipeline-output/
-# **/output/
+# Dataset / pipeline outputs (generated artifacts)
+pipeline-output/
+
+java-metamodel/output/
+skeleton_generator/output/
+
+alloy-in-ecore-java-verification/VerificationEnvironment/output/
+alloy-in-ecore-java-verification/VerificationEnvironment/pipeline-output/
+
+# If you want to keep generated outputs under version control, remove the entries above.

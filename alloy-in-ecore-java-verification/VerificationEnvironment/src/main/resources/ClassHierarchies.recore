@@ -1,0 +1,158 @@
+import ecore : 'http://www.eclipse.org/emf/2002/Ecore';
+
+package class_hierarchies : ch = 'http://example.com/class_hierarchies'
+{
+    -- ================================================================
+    -- ENUMS
+    -- ================================================================
+    enum Visibility
+    {
+        literal Pub = 0;
+        literal Priv = 1;
+        literal Prot = 2;
+        literal Pkg = 3;
+    }
+
+    enum YesNo
+    {
+        literal Yes = 0;
+        literal No = 1;
+    }
+
+    enum Scope
+    {
+        literal Instance = 0;
+        literal Static = 1;
+    }
+
+    enum ClassKind
+    {
+        literal ConcreteClass = 0;
+        literal Interface = 1;
+    }
+
+    -- ================================================================
+    -- METHOD
+    -- ================================================================
+    class Method
+    {
+        attribute mid : String {id};
+        attribute mname : String;
+        attribute msig : String;
+        attribute mvis : Visibility;
+        attribute mscope : Scope;
+        attribute rtype : String;
+        attribute isAbstract : YesNo;
+    }
+
+    -- ================================================================
+    -- ATTRIBUTE
+    -- ================================================================
+    class Attribute
+    {
+        attribute aid : String {id};
+        attribute aname : String;
+        attribute atype : String;
+        attribute avis : Visibility;
+        attribute ascope : Scope;
+    }
+
+    -- ================================================================
+    -- METHOD BODY
+    -- ================================================================
+    class MethodBody;
+
+    -- ================================================================
+    -- METHOD IMPLEMENTATION (mid -> lone MethodBody)
+    -- ================================================================
+    class MethodImpl
+    {
+        property method : Method;
+        property body : MethodBody[?] {composes};
+    }
+
+    -- ================================================================
+    -- CLASS
+    -- ================================================================
+    class Class
+    {
+        attribute cid : String {id};
+        attribute kind : ClassKind;
+        attribute isAbstract : YesNo;
+        property parents : Class[*];
+        property attributes : Attribute[*] {composes};
+        property methods : Method[*] {composes};
+        property iattributes : Attribute[*];
+        property imethods : Method[*];
+        property implementation : MethodImpl[*] {composes};
+    }
+
+    -- ================================================================
+    -- ROOT CONTAINER (for JSON→AIE mapped instances)
+    -- ================================================================
+    -- The JSON→AIE mapper wraps all objects under a synthetic Root object so the
+    -- instance has a single root.
+    class Root
+    {
+        property contents : Class[*] {composes};
+    }
+
+    -- ================================================================
+    -- SECTION 4: WELL-FORMEDNESS
+    -- ================================================================
+    invariant UniqueClassIds :
+        all c1, c2 : Class | c1 != c2 implies c1.cid != c2.cid;
+
+    invariant UniqueMethodIds :
+        all m1, m2 : Method | m1 != m2 implies m1.mid != m2.mid;
+
+    invariant UniqueAttributeIds :
+        all a1, a2 : Attribute | a1 != a2 implies a1.aid != a2.aid;
+
+    -- ================================================================
+    -- SECTION 5: ACYCLICITY
+    -- ================================================================
+    invariant NoCycles :
+        no c : Class | c in c.^parents;
+
+    -- ================================================================
+    -- SECTION 6: INHERITANCE LOGIC
+    -- ================================================================
+    invariant InheritedMethods :
+        all c : Class |
+            c.imethods = {m : Method |
+                some anc : c.^parents | m in anc.methods and m.mvis != Priv};
+
+    invariant InheritedAttributes :
+        all c : Class |
+            c.iattributes = {a : Attribute |
+                some anc : c.^parents | a in anc.attributes and a.avis != Priv};
+
+    invariant NoMethodNameConflictInInherited :
+        all c : Class | all m1, m2 : c.imethods | m1 != m2 implies m1.mname != m2.mname;
+
+    invariant DisjointLocalInheritedMethods :
+        all c : Class | no c.methods & c.imethods;
+
+    invariant DisjointLocalInheritedAttributes :
+        all c : Class | no c.attributes & c.iattributes;
+
+    -- ================================================================
+    -- SECTION 8: OWNERSHIP
+    -- ================================================================
+    invariant ExclusiveMethodOwnership :
+        all m : Method | one c : Class | m in c.methods;
+
+    invariant ExclusiveAttributeOwnership :
+        all a : Attribute | one c : Class | a in c.attributes;
+
+    invariant StaticMethodsCannotBeAbstract :
+        all m : Method | m.mscope = Static implies m.isAbstract = No;
+
+    -- ================================================================
+    -- SECTION 9: IMPLEMENTATION
+    -- ================================================================
+    invariant NoPhantomImplementations :
+        all c : Class | all impl : c.implementation |
+            impl.method in c.methods + c.imethods;
+}

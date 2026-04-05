@@ -1,0 +1,219 @@
+{
+  "mode": "single",
+  "generatedAt": "Fri Mar 27 17:41:21 WEST 2026",
+  "projects": [
+    {
+      "projectName": "samples",
+      "types": [
+        {
+          "qualifiedName": "Animal",
+          "simpleName": "Animal",
+          "kind": "class",
+          "interfaces": [
+            "Speakable"
+          ],
+          "fields": [
+            {
+              "name": "name",
+              "type": "String",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "age",
+              "type": "int",
+              "visibility": "protected",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "count",
+              "type": "int",
+              "visibility": "private",
+              "isStatic": true,
+              "isFinal": false
+            }
+          ],
+          "methods": [
+            {
+              "name": "describe",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": true,
+              "parameters": []
+            },
+            {
+              "name": "getAge",
+              "returnType": "int",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "getCount",
+              "returnType": "int",
+              "visibility": "public",
+              "isStatic": true,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "getName",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "setAge",
+              "returnType": "void",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "age",
+                  "type": "int"
+                }
+              ]
+            },
+            {
+              "name": "setName",
+              "returnType": "void",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "name",
+                  "type": "String"
+                }
+              ]
+            },
+            {
+              "name": "toString",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            }
+          ],
+          "isAbstract": true,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "Dog",
+          "simpleName": "Dog",
+          "kind": "class",
+          "superClass": "Animal",
+          "interfaces": [],
+          "fields": [
+            {
+              "name": "breed",
+              "type": "String",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "trained",
+              "type": "boolean",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            }
+          ],
+          "methods": [
+            {
+              "name": "describe",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "fetch",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "distance",
+                  "type": "int"
+                }
+              ]
+            },
+            {
+              "name": "getBreed",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "isTrained",
+              "returnType": "boolean",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "speak",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "train",
+              "returnType": "void",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "Speakable",
+          "simpleName": "Speakable",
+          "kind": "interface",
+          "interfaces": [],
+          "fields": [],
+          "methods": [
+            {
+              "name": "isSilent",
+              "returnType": "boolean",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "speak",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": true,
+              "parameters": []
+            }
+          ],
+          "isAbstract": true,
+          "isFinal": false
+        }
+      ]
+    }
+  ]
+}

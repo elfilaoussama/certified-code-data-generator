@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ecore:EPackage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="class_hierarchies" nsURI="http://example.com/class_hierarchies" nsPrefix="ch">
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="name" value="UniqueClassIds"/>
+    <details key="formula" value="all c1, c2 : Class | c1 != c2 implies c1.cid != c2.cid"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="name" value="UniqueMethodIds"/>
+    <details key="formula" value="all m1, m2 : Method | m1 != m2 implies m1.mid != m2.mid"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="name" value="UniqueAttributeIds"/>
+    <details key="formula" value="all a1, a2 : Attribute | a1 != a2 implies a1.aid != a2.aid"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="name" value="NoCycles"/>
+    <details key="formula" value="no c : Class | c in c.^parents"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="name" value="InheritedMethods"/>
+    <details key="formula" value="all c : Class |&#xA;            c.imethods = {m : Method |&#xA;                some anc : c.^parents | m in anc.methods and m.mvis != Priv}"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="name" value="InheritedAttributes"/>
+    <details key="formula" value="all c : Class |&#xA;            c.iattributes = {a : Attribute |&#xA;                some anc : c.^parents | a in anc.attributes and a.avis != Priv}"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="name" value="NoMethodNameConflictInInherited"/>
+    <details key="formula" value="all c : Class | all m1, m2 : c.imethods | m1 != m2 implies m1.mname != m2.mname"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="name" value="DisjointLocalInheritedMethods"/>
+    <details key="formula" value="all c : Class | no c.methods &amp; c.imethods"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="name" value="DisjointLocalInheritedAttributes"/>
+    <details key="formula" value="all c : Class | no c.attributes &amp; c.iattributes"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="name" value="ExclusiveMethodOwnership"/>
+    <details key="formula" value="all m : Method | one c : Class | m in c.methods"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="name" value="ExclusiveAttributeOwnership"/>
+    <details key="formula" value="all a : Attribute | one c : Class | a in c.attributes"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="name" value="StaticMethodsCannotBeAbstract"/>
+    <details key="formula" value="all m : Method | m.mscope = Static implies m.isAbstract = No"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/expression/invariant">
+    <details key="callable" value="false"/>
+    <details key="name" value="NoPhantomImplementations"/>
+    <details key="formula" value="all c : Class | all impl : c.implementation |&#xA;            impl.method in c.methods + c.imethods"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/model">
+    <details key="name"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.modelwriter.eu/alloyinecore/import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EEnum" name="Visibility">
+    <eLiterals name="Pub"/>
+    <eLiterals name="Priv"/>
+    <eLiterals name="Prot"/>
+    <eLiterals name="Pkg"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="YesNo">
+    <eLiterals name="Yes"/>
+    <eLiterals name="No"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Scope">
+    <eLiterals name="Instance"/>
+    <eLiterals name="Static"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ClassKind">
+    <eLiterals name="ConcreteClass"/>
+    <eLiterals name="Interface"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Method">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mid" lowerBound="1" iD="true">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mname" lowerBound="1">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="msig" lowerBound="1">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mvis" lowerBound="1" eType="//Visibility"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mscope" lowerBound="1" eType="//Scope"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rtype" lowerBound="1">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isAbstract" lowerBound="1" eType="//YesNo"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Attribute">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="aid" lowerBound="1" iD="true">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="aname" lowerBound="1">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="atype" lowerBound="1">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="avis" lowerBound="1" eType="//Visibility"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="ascope" lowerBound="1" eType="//Scope"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MethodBody"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MethodImpl">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="method" lowerBound="1" eType="//Method"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="body" eType="//MethodBody" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Class">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cid" lowerBound="1" iD="true">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" lowerBound="1" eType="//ClassKind"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isAbstract" lowerBound="1" eType="//YesNo"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parents" upperBound="-1" eType="//Class"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attributes" upperBound="-1" eType="//Attribute" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="methods" upperBound="-1" eType="//Method" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="iattributes" upperBound="-1" eType="//Attribute"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="imethods" upperBound="-1" eType="//Method"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="implementation" upperBound="-1" eType="//MethodImpl" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Root">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contents" upperBound="-1" eType="//Class" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

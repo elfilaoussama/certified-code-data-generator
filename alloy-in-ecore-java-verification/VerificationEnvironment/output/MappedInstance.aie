@@ -1,0 +1,2204 @@
+instance results;
+model class_hierarchies : 'ECORE_PATH';
+
+Root {
+  contents: {
+    Class {
+      cid: "org_springframework_samples_petclinic_PetClinicApplication",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_PetClinicApplication_m0",
+          mname: "main",
+          msig: "main(String[])",
+          mvis: Pub,
+          mscope: Static,
+          rtype: "void",
+          isAbstract: No
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_PetClinicRuntimeHints",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_PetClinicRuntimeHints_m0",
+          mname: "registerHints",
+          msig: "registerHints(RuntimeHints, ClassLoader)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_MySqlIntegrationTests",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_MySqlIntegrationTests_m0",
+          mname: "findAll",
+          msig: "findAll()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_MySqlIntegrationTests_m1",
+          mname: "ownerDetails",
+          msig: "ownerDetails()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+      },
+      attributes: {
+        Attribute {
+          aid: "org_springframework_samples_petclinic_MySqlIntegrationTests_a0",
+          aname: "container",
+          atype: "MySQLContainer",
+          avis: Pkg,
+          ascope: Static
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_MySqlIntegrationTests_a1",
+          aname: "port",
+          atype: "int",
+          avis: Pkg,
+          ascope: Instance
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_MySqlIntegrationTests_a2",
+          aname: "vets",
+          atype: "VetRepository",
+          avis: Priv,
+          ascope: Instance
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_MySqlIntegrationTests_a3",
+          aname: "builder",
+          atype: "RestTemplateBuilder",
+          avis: Priv,
+          ascope: Instance
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_MysqlTestApplication",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_MysqlTestApplication_m0",
+          mname: "container",
+          msig: "container()",
+          mvis: Pkg,
+          mscope: Static,
+          rtype: "MySQLContainer",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_MysqlTestApplication_m1",
+          mname: "main",
+          msig: "main(String[])",
+          mvis: Pub,
+          mscope: Static,
+          rtype: "void",
+          isAbstract: No
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_PetClinicIntegrationTests",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_PetClinicIntegrationTests_m0",
+          mname: "findAll",
+          msig: "findAll()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_PetClinicIntegrationTests_m1",
+          mname: "main",
+          msig: "main(String[])",
+          mvis: Pub,
+          mscope: Static,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_PetClinicIntegrationTests_m2",
+          mname: "ownerDetails",
+          msig: "ownerDetails()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_PetClinicIntegrationTests_m3",
+          mname: "ownerList",
+          msig: "ownerList()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+      },
+      attributes: {
+        Attribute {
+          aid: "org_springframework_samples_petclinic_PetClinicIntegrationTests_a0",
+          aname: "port",
+          atype: "int",
+          avis: Pkg,
+          ascope: Instance
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_PetClinicIntegrationTests_a1",
+          aname: "vets",
+          atype: "VetRepository",
+          avis: Priv,
+          ascope: Instance
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_PetClinicIntegrationTests_a2",
+          aname: "builder",
+          atype: "RestTemplateBuilder",
+          avis: Priv,
+          ascope: Instance
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_PostgresIntegrationTests",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_PostgresIntegrationTests_m0",
+          mname: "available",
+          msig: "available()",
+          mvis: Pkg,
+          mscope: Static,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_PostgresIntegrationTests_m1",
+          mname: "findAll",
+          msig: "findAll()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_PostgresIntegrationTests_m2",
+          mname: "main",
+          msig: "main(String[])",
+          mvis: Pub,
+          mscope: Static,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_PostgresIntegrationTests_m3",
+          mname: "ownerDetails",
+          msig: "ownerDetails()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+      },
+      attributes: {
+        Attribute {
+          aid: "org_springframework_samples_petclinic_PostgresIntegrationTests_a0",
+          aname: "port",
+          atype: "int",
+          avis: Pkg,
+          ascope: Instance
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_PostgresIntegrationTests_a1",
+          aname: "vets",
+          atype: "VetRepository",
+          avis: Priv,
+          ascope: Instance
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_PostgresIntegrationTests_a2",
+          aname: "builder",
+          atype: "RestTemplateBuilder",
+          avis: Priv,
+          ascope: Instance
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_model_BaseEntity",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_model_BaseEntity_m0",
+          mname: "getId",
+          msig: "getId()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "Integer",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_model_BaseEntity_m1",
+          mname: "isNew",
+          msig: "isNew()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "boolean",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_model_BaseEntity_m2",
+          mname: "setId",
+          msig: "setId(Integer)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+      },
+      attributes: {
+        Attribute {
+          aid: "org_springframework_samples_petclinic_model_BaseEntity_a0",
+          aname: "id",
+          atype: "Integer",
+          avis: Priv,
+          ascope: Instance
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_model_NamedEntity",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_model_NamedEntity_m0",
+          mname: "getName",
+          msig: "getName()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "String",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_model_NamedEntity_m1",
+          mname: "setName",
+          msig: "setName(String)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_model_NamedEntity_m2",
+          mname: "toString",
+          msig: "toString()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "String",
+          isAbstract: No
+        }
+      },
+      attributes: {
+        Attribute {
+          aid: "org_springframework_samples_petclinic_model_NamedEntity_a0",
+          aname: "name",
+          atype: "String",
+          avis: Priv,
+          ascope: Instance
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_model_Person",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_model_Person_m0",
+          mname: "getFirstName",
+          msig: "getFirstName()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "String",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_model_Person_m1",
+          mname: "getLastName",
+          msig: "getLastName()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "String",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_model_Person_m2",
+          mname: "setFirstName",
+          msig: "setFirstName(String)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_model_Person_m3",
+          mname: "setLastName",
+          msig: "setLastName(String)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+      },
+      attributes: {
+        Attribute {
+          aid: "org_springframework_samples_petclinic_model_Person_a0",
+          aname: "firstName",
+          atype: "String",
+          avis: Priv,
+          ascope: Instance
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_model_Person_a1",
+          aname: "lastName",
+          atype: "String",
+          avis: Priv,
+          ascope: Instance
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_model_ValidatorTests",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_model_ValidatorTests_m0",
+          mname: "createValidator",
+          msig: "createValidator()",
+          mvis: Priv,
+          mscope: Instance,
+          rtype: "Validator",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_model_ValidatorTests_m1",
+          mname: "shouldNotValidateWhenFirstNameEmpty",
+          msig: "shouldNotValidateWhenFirstNameEmpty()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_owner_Owner",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_Owner_m0",
+          mname: "addPet",
+          msig: "addPet(Pet)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_Owner_m1",
+          mname: "addVisit",
+          msig: "addVisit(Integer, Visit)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_Owner_m2",
+          mname: "getAddress",
+          msig: "getAddress()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "String",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_Owner_m3",
+          mname: "getCity",
+          msig: "getCity()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "String",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_Owner_m4",
+          mname: "getPet",
+          msig: "getPet(Integer)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "Pet",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_Owner_m5",
+          mname: "getPet",
+          msig: "getPet(String)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "Pet",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_Owner_m6",
+          mname: "getPet",
+          msig: "getPet(String, boolean)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "Pet",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_Owner_m7",
+          mname: "getPets",
+          msig: "getPets()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "List",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_Owner_m8",
+          mname: "getTelephone",
+          msig: "getTelephone()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "String",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_Owner_m9",
+          mname: "setAddress",
+          msig: "setAddress(String)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_Owner_m10",
+          mname: "setCity",
+          msig: "setCity(String)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_Owner_m11",
+          mname: "setTelephone",
+          msig: "setTelephone(String)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_Owner_m12",
+          mname: "toString",
+          msig: "toString()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "String",
+          isAbstract: No
+        }
+      },
+      attributes: {
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_Owner_a0",
+          aname: "address",
+          atype: "String",
+          avis: Priv,
+          ascope: Instance
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_Owner_a1",
+          aname: "city",
+          atype: "String",
+          avis: Priv,
+          ascope: Instance
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_Owner_a2",
+          aname: "telephone",
+          atype: "String",
+          avis: Priv,
+          ascope: Instance
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_Owner_a3",
+          aname: "pets",
+          atype: "List",
+          avis: Priv,
+          ascope: Instance
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_owner_OwnerController",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_OwnerController_m0",
+          mname: "addPaginationModel",
+          msig: "addPaginationModel(int, Model, Page)",
+          mvis: Priv,
+          mscope: Instance,
+          rtype: "String",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_OwnerController_m1",
+          mname: "findOwner",
+          msig: "findOwner(Integer)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "Owner",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_OwnerController_m2",
+          mname: "findPaginatedForOwnersLastName",
+          msig: "findPaginatedForOwnersLastName(int, String)",
+          mvis: Priv,
+          mscope: Instance,
+          rtype: "Page",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_OwnerController_m3",
+          mname: "initCreationForm",
+          msig: "initCreationForm()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "String",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_OwnerController_m4",
+          mname: "initFindForm",
+          msig: "initFindForm()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "String",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_OwnerController_m5",
+          mname: "initUpdateOwnerForm",
+          msig: "initUpdateOwnerForm()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "String",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_OwnerController_m6",
+          mname: "processCreationForm",
+          msig: "processCreationForm(Owner, BindingResult, RedirectAttributes)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "String",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_OwnerController_m7",
+          mname: "processFindForm",
+          msig: "processFindForm(int, Owner, BindingResult, Model)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "String",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_OwnerController_m8",
+          mname: "processUpdateOwnerForm",
+          msig: "processUpdateOwnerForm(Owner, BindingResult, int, RedirectAttributes)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "String",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_OwnerController_m9",
+          mname: "setAllowedFields",
+          msig: "setAllowedFields(WebDataBinder)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_OwnerController_m10",
+          mname: "showOwner",
+          msig: "showOwner(int)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "ModelAndView",
+          isAbstract: No
+        }
+      },
+      attributes: {
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_OwnerController_a0",
+          aname: "VIEWS_OWNER_CREATE_OR_UPDATE_FORM",
+          atype: "String",
+          avis: Priv,
+          ascope: Static
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_OwnerController_a1",
+          aname: "owners",
+          atype: "OwnerRepository",
+          avis: Priv,
+          ascope: Instance
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_owner_OwnerRepository",
+      kind: Interface,
+      isAbstract: Yes,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_OwnerRepository_m0",
+          mname: "findById",
+          msig: "findById(Integer)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "Optional",
+          isAbstract: Yes
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_OwnerRepository_m1",
+          mname: "findByLastNameStartingWith",
+          msig: "findByLastNameStartingWith(String, Pageable)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "Page",
+          isAbstract: Yes
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_owner_Pet",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_Pet_m0",
+          mname: "addVisit",
+          msig: "addVisit(Visit)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_Pet_m1",
+          mname: "getBirthDate",
+          msig: "getBirthDate()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "LocalDate",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_Pet_m2",
+          mname: "getType",
+          msig: "getType()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "PetType",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_Pet_m3",
+          mname: "getVisits",
+          msig: "getVisits()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "Collection",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_Pet_m4",
+          mname: "setBirthDate",
+          msig: "setBirthDate(LocalDate)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_Pet_m5",
+          mname: "setType",
+          msig: "setType(PetType)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+      },
+      attributes: {
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_Pet_a0",
+          aname: "birthDate",
+          atype: "LocalDate",
+          avis: Priv,
+          ascope: Instance
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_Pet_a1",
+          aname: "type",
+          atype: "PetType",
+          avis: Priv,
+          ascope: Instance
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_Pet_a2",
+          aname: "visits",
+          atype: "Set",
+          avis: Priv,
+          ascope: Instance
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_owner_PetController",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_PetController_m0",
+          mname: "findOwner",
+          msig: "findOwner(int)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "Owner",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_PetController_m1",
+          mname: "findPet",
+          msig: "findPet(int, Integer)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "Pet",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_PetController_m2",
+          mname: "initCreationForm",
+          msig: "initCreationForm(Owner, ModelMap)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "String",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_PetController_m3",
+          mname: "initOwnerBinder",
+          msig: "initOwnerBinder(WebDataBinder)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_PetController_m4",
+          mname: "initPetBinder",
+          msig: "initPetBinder(WebDataBinder)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_PetController_m5",
+          mname: "initUpdateForm",
+          msig: "initUpdateForm()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "String",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_PetController_m6",
+          mname: "populatePetTypes",
+          msig: "populatePetTypes()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "Collection",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_PetController_m7",
+          mname: "processCreationForm",
+          msig: "processCreationForm(Owner, Pet, BindingResult, RedirectAttributes)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "String",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_PetController_m8",
+          mname: "processUpdateForm",
+          msig: "processUpdateForm(Owner, Pet, BindingResult, RedirectAttributes)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "String",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_PetController_m9",
+          mname: "updatePetDetails",
+          msig: "updatePetDetails(Owner, Pet)",
+          mvis: Priv,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+      },
+      attributes: {
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_PetController_a0",
+          aname: "VIEWS_PETS_CREATE_OR_UPDATE_FORM",
+          atype: "String",
+          avis: Priv,
+          ascope: Static
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_PetController_a1",
+          aname: "owners",
+          atype: "OwnerRepository",
+          avis: Priv,
+          ascope: Instance
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_PetController_a2",
+          aname: "types",
+          atype: "PetTypeRepository",
+          avis: Priv,
+          ascope: Instance
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_owner_PetType",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_owner_PetTypeFormatter",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_PetTypeFormatter_m0",
+          mname: "parse",
+          msig: "parse(String, Locale)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "PetType",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_PetTypeFormatter_m1",
+          mname: "print",
+          msig: "print(PetType, Locale)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "String",
+          isAbstract: No
+        }
+      },
+      attributes: {
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_PetTypeFormatter_a0",
+          aname: "types",
+          atype: "PetTypeRepository",
+          avis: Priv,
+          ascope: Instance
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_owner_PetTypeRepository",
+      kind: Interface,
+      isAbstract: Yes,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_PetTypeRepository_m0",
+          mname: "findPetTypes",
+          msig: "findPetTypes()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "List",
+          isAbstract: Yes
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_owner_PetValidator",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_PetValidator_m0",
+          mname: "supports",
+          msig: "supports(Class)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "boolean",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_PetValidator_m1",
+          mname: "validate",
+          msig: "validate(Object, Errors)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+      },
+      attributes: {
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_PetValidator_a0",
+          aname: "REQUIRED",
+          atype: "String",
+          avis: Priv,
+          ascope: Static
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_owner_Visit",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_Visit_m0",
+          mname: "getDate",
+          msig: "getDate()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "LocalDate",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_Visit_m1",
+          mname: "getDescription",
+          msig: "getDescription()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "String",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_Visit_m2",
+          mname: "setDate",
+          msig: "setDate(LocalDate)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_Visit_m3",
+          mname: "setDescription",
+          msig: "setDescription(String)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+      },
+      attributes: {
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_Visit_a0",
+          aname: "date",
+          atype: "LocalDate",
+          avis: Priv,
+          ascope: Instance
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_Visit_a1",
+          aname: "description",
+          atype: "String",
+          avis: Priv,
+          ascope: Instance
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_owner_VisitController",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_VisitController_m0",
+          mname: "initNewVisitForm",
+          msig: "initNewVisitForm()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "String",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_VisitController_m1",
+          mname: "loadPetWithVisit",
+          msig: "loadPetWithVisit(int, int, Map)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "Visit",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_VisitController_m2",
+          mname: "processNewVisitForm",
+          msig: "processNewVisitForm(Owner, int, Visit, BindingResult, RedirectAttributes)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "String",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_VisitController_m3",
+          mname: "setAllowedFields",
+          msig: "setAllowedFields(WebDataBinder)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+      },
+      attributes: {
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_VisitController_a0",
+          aname: "owners",
+          atype: "OwnerRepository",
+          avis: Priv,
+          ascope: Instance
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_owner_OwnerControllerTests",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_OwnerControllerTests_m0",
+          mname: "george",
+          msig: "george()",
+          mvis: Priv,
+          mscope: Instance,
+          rtype: "Owner",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_OwnerControllerTests_m1",
+          mname: "initCreationForm",
+          msig: "initCreationForm()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_OwnerControllerTests_m2",
+          mname: "initFindForm",
+          msig: "initFindForm()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_OwnerControllerTests_m3",
+          mname: "initUpdateOwnerForm",
+          msig: "initUpdateOwnerForm()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_OwnerControllerTests_m4",
+          mname: "processCreationFormHasErrors",
+          msig: "processCreationFormHasErrors()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_OwnerControllerTests_m5",
+          mname: "processCreationFormSuccess",
+          msig: "processCreationFormSuccess()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_OwnerControllerTests_m6",
+          mname: "processFindFormByLastName",
+          msig: "processFindFormByLastName()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_OwnerControllerTests_m7",
+          mname: "processFindFormNoOwnersFound",
+          msig: "processFindFormNoOwnersFound()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_OwnerControllerTests_m8",
+          mname: "processFindFormSuccess",
+          msig: "processFindFormSuccess()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_OwnerControllerTests_m9",
+          mname: "processUpdateOwnerFormHasErrors",
+          msig: "processUpdateOwnerFormHasErrors()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_OwnerControllerTests_m10",
+          mname: "processUpdateOwnerFormSuccess",
+          msig: "processUpdateOwnerFormSuccess()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_OwnerControllerTests_m11",
+          mname: "processUpdateOwnerFormUnchangedSuccess",
+          msig: "processUpdateOwnerFormUnchangedSuccess()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_OwnerControllerTests_m12",
+          mname: "processUpdateOwnerFormWithIdMismatch",
+          msig: "processUpdateOwnerFormWithIdMismatch()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_OwnerControllerTests_m13",
+          mname: "setup",
+          msig: "setup()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_OwnerControllerTests_m14",
+          mname: "showOwner",
+          msig: "showOwner()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+      },
+      attributes: {
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_OwnerControllerTests_a0",
+          aname: "TEST_OWNER_ID",
+          atype: "int",
+          avis: Priv,
+          ascope: Static
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_OwnerControllerTests_a1",
+          aname: "mockMvc",
+          atype: "MockMvc",
+          avis: Priv,
+          ascope: Instance
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_OwnerControllerTests_a2",
+          aname: "owners",
+          atype: "OwnerRepository",
+          avis: Priv,
+          ascope: Instance
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_owner_PetControllerTests",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_PetControllerTests_m0",
+          mname: "initCreationForm",
+          msig: "initCreationForm()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_PetControllerTests_m1",
+          mname: "processCreationFormSuccess",
+          msig: "processCreationFormSuccess()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_PetControllerTests_m2",
+          mname: "processUpdateFormSuccess",
+          msig: "processUpdateFormSuccess()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_PetControllerTests_m3",
+          mname: "setup",
+          msig: "setup()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+      },
+      attributes: {
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_PetControllerTests_a0",
+          aname: "TEST_OWNER_ID",
+          atype: "int",
+          avis: Priv,
+          ascope: Static
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_PetControllerTests_a1",
+          aname: "TEST_PET_ID",
+          atype: "int",
+          avis: Priv,
+          ascope: Static
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_PetControllerTests_a2",
+          aname: "mockMvc",
+          atype: "MockMvc",
+          avis: Priv,
+          ascope: Instance
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_PetControllerTests_a3",
+          aname: "owners",
+          atype: "OwnerRepository",
+          avis: Priv,
+          ascope: Instance
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_PetControllerTests_a4",
+          aname: "types",
+          atype: "PetTypeRepository",
+          avis: Priv,
+          ascope: Instance
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_owner_PetTypeFormatterTests",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_PetTypeFormatterTests_m0",
+          mname: "makePetTypes",
+          msig: "makePetTypes()",
+          mvis: Priv,
+          mscope: Instance,
+          rtype: "List",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_PetTypeFormatterTests_m1",
+          mname: "setup",
+          msig: "setup()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_PetTypeFormatterTests_m2",
+          mname: "shouldParse",
+          msig: "shouldParse()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_PetTypeFormatterTests_m3",
+          mname: "shouldThrowParseException",
+          msig: "shouldThrowParseException()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_PetTypeFormatterTests_m4",
+          mname: "testPrint",
+          msig: "testPrint()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+      },
+      attributes: {
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_PetTypeFormatterTests_a0",
+          aname: "types",
+          atype: "PetTypeRepository",
+          avis: Priv,
+          ascope: Instance
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_PetTypeFormatterTests_a1",
+          aname: "petTypeFormatter",
+          atype: "PetTypeFormatter",
+          avis: Priv,
+          ascope: Instance
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_owner_PetValidatorTests",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_PetValidatorTests_m0",
+          mname: "setUp",
+          msig: "setUp()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_PetValidatorTests_m1",
+          mname: "validate",
+          msig: "validate()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+      },
+      attributes: {
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_PetValidatorTests_a0",
+          aname: "petValidator",
+          atype: "PetValidator",
+          avis: Priv,
+          ascope: Instance
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_PetValidatorTests_a1",
+          aname: "pet",
+          atype: "Pet",
+          avis: Priv,
+          ascope: Instance
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_PetValidatorTests_a2",
+          aname: "petType",
+          atype: "PetType",
+          avis: Priv,
+          ascope: Instance
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_PetValidatorTests_a3",
+          aname: "errors",
+          atype: "Errors",
+          avis: Priv,
+          ascope: Instance
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_PetValidatorTests_a4",
+          aname: "petName",
+          atype: "String",
+          avis: Priv,
+          ascope: Static
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_PetValidatorTests_a5",
+          aname: "petTypeName",
+          atype: "String",
+          avis: Priv,
+          ascope: Static
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_PetValidatorTests_a6",
+          aname: "petBirthDate",
+          atype: "LocalDate",
+          avis: Priv,
+          ascope: Static
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_owner_VisitControllerTests",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_VisitControllerTests_m0",
+          mname: "init",
+          msig: "init()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_VisitControllerTests_m1",
+          mname: "initNewVisitForm",
+          msig: "initNewVisitForm()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_VisitControllerTests_m2",
+          mname: "processNewVisitFormHasErrors",
+          msig: "processNewVisitFormHasErrors()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_owner_VisitControllerTests_m3",
+          mname: "processNewVisitFormSuccess",
+          msig: "processNewVisitFormSuccess()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+      },
+      attributes: {
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_VisitControllerTests_a0",
+          aname: "TEST_OWNER_ID",
+          atype: "int",
+          avis: Priv,
+          ascope: Static
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_VisitControllerTests_a1",
+          aname: "TEST_PET_ID",
+          atype: "int",
+          avis: Priv,
+          ascope: Static
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_VisitControllerTests_a2",
+          aname: "mockMvc",
+          atype: "MockMvc",
+          avis: Priv,
+          ascope: Instance
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_owner_VisitControllerTests_a3",
+          aname: "owners",
+          atype: "OwnerRepository",
+          avis: Priv,
+          ascope: Instance
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_system_CacheConfiguration",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_system_CacheConfiguration_m0",
+          mname: "cacheConfiguration",
+          msig: "cacheConfiguration()",
+          mvis: Priv,
+          mscope: Instance,
+          rtype: "Configuration",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_system_CacheConfiguration_m1",
+          mname: "petclinicCacheConfigurationCustomizer",
+          msig: "petclinicCacheConfigurationCustomizer()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "JCacheManagerCustomizer",
+          isAbstract: No
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_system_CrashController",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_system_CrashController_m0",
+          mname: "triggerException",
+          msig: "triggerException()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "String",
+          isAbstract: No
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_system_WebConfiguration",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_system_WebConfiguration_m0",
+          mname: "addInterceptors",
+          msig: "addInterceptors(InterceptorRegistry)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_system_WebConfiguration_m1",
+          mname: "localeChangeInterceptor",
+          msig: "localeChangeInterceptor()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "LocaleChangeInterceptor",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_system_WebConfiguration_m2",
+          mname: "localeResolver",
+          msig: "localeResolver()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "LocaleResolver",
+          isAbstract: No
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_system_WelcomeController",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_system_WelcomeController_m0",
+          mname: "welcome",
+          msig: "welcome()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "String",
+          isAbstract: No
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_system_CrashControllerIntegrationTests",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_system_CrashControllerIntegrationTests_m0",
+          mname: "triggerExceptionHtml",
+          msig: "triggerExceptionHtml()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_system_CrashControllerIntegrationTests_m1",
+          mname: "triggerExceptionJson",
+          msig: "triggerExceptionJson()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+      },
+      attributes: {
+        Attribute {
+          aid: "org_springframework_samples_petclinic_system_CrashControllerIntegrationTests_a0",
+          aname: "port",
+          atype: "int",
+          avis: Priv,
+          ascope: Instance
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_system_CrashControllerIntegrationTests_a1",
+          aname: "rest",
+          atype: "TestRestTemplate",
+          avis: Priv,
+          ascope: Instance
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_system_CrashControllerTests",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_system_CrashControllerTests_m0",
+          mname: "triggerException",
+          msig: "triggerException()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+      },
+      attributes: {
+        Attribute {
+          aid: "org_springframework_samples_petclinic_system_CrashControllerTests_a0",
+          aname: "testee",
+          atype: "CrashController",
+          avis: Pkg,
+          ascope: Instance
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_system_I18nPropertiesSyncTest",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_system_I18nPropertiesSyncTest_m0",
+          mname: "checkI18nPropertyFilesAreInSync",
+          msig: "checkI18nPropertyFilesAreInSync()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_system_I18nPropertiesSyncTest_m1",
+          mname: "checkNonInternationalizedStrings",
+          msig: "checkNonInternationalizedStrings()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+      },
+      attributes: {
+        Attribute {
+          aid: "org_springframework_samples_petclinic_system_I18nPropertiesSyncTest_a0",
+          aname: "I18N_DIR",
+          atype: "String",
+          avis: Priv,
+          ascope: Static
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_system_I18nPropertiesSyncTest_a1",
+          aname: "BASE_NAME",
+          atype: "String",
+          avis: Priv,
+          ascope: Static
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_system_I18nPropertiesSyncTest_a2",
+          aname: "PROPERTIES",
+          atype: "String",
+          avis: Pub,
+          ascope: Static
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_system_I18nPropertiesSyncTest_a3",
+          aname: "HTML_TEXT_LITERAL",
+          atype: "Pattern",
+          avis: Priv,
+          ascope: Static
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_system_I18nPropertiesSyncTest_a4",
+          aname: "BRACKET_ONLY",
+          atype: "Pattern",
+          avis: Priv,
+          ascope: Static
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_system_I18nPropertiesSyncTest_a5",
+          aname: "HAS_TH_TEXT_ATTRIBUTE",
+          atype: "Pattern",
+          avis: Priv,
+          ascope: Static
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_vet_Specialty",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_vet_Vet",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_vet_Vet_m0",
+          mname: "addSpecialty",
+          msig: "addSpecialty(Specialty)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_vet_Vet_m1",
+          mname: "getNrOfSpecialties",
+          msig: "getNrOfSpecialties()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "int",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_vet_Vet_m2",
+          mname: "getSpecialties",
+          msig: "getSpecialties()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "List",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_vet_Vet_m3",
+          mname: "getSpecialtiesInternal",
+          msig: "getSpecialtiesInternal()",
+          mvis: Prot,
+          mscope: Instance,
+          rtype: "Set",
+          isAbstract: No
+        }
+      },
+      attributes: {
+        Attribute {
+          aid: "org_springframework_samples_petclinic_vet_Vet_a0",
+          aname: "specialties",
+          atype: "Set",
+          avis: Priv,
+          ascope: Instance
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_vet_VetController",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_vet_VetController_m0",
+          mname: "addPaginationModel",
+          msig: "addPaginationModel(int, Page, Model)",
+          mvis: Priv,
+          mscope: Instance,
+          rtype: "String",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_vet_VetController_m1",
+          mname: "findPaginated",
+          msig: "findPaginated(int)",
+          mvis: Priv,
+          mscope: Instance,
+          rtype: "Page",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_vet_VetController_m2",
+          mname: "showResourcesVetList",
+          msig: "showResourcesVetList()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "Vets",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_vet_VetController_m3",
+          mname: "showVetList",
+          msig: "showVetList(int, Model)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "String",
+          isAbstract: No
+        }
+      },
+      attributes: {
+        Attribute {
+          aid: "org_springframework_samples_petclinic_vet_VetController_a0",
+          aname: "vetRepository",
+          atype: "VetRepository",
+          avis: Priv,
+          ascope: Instance
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_vet_VetRepository",
+      kind: Interface,
+      isAbstract: Yes,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_vet_VetRepository_m0",
+          mname: "findAll",
+          msig: "findAll()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "Collection",
+          isAbstract: Yes
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_vet_VetRepository_m1",
+          mname: "findAll",
+          msig: "findAll(Pageable)",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "Page",
+          isAbstract: Yes
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_vet_Vets",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_vet_Vets_m0",
+          mname: "getVetList",
+          msig: "getVetList()",
+          mvis: Pub,
+          mscope: Instance,
+          rtype: "List",
+          isAbstract: No
+        }
+      },
+      attributes: {
+        Attribute {
+          aid: "org_springframework_samples_petclinic_vet_Vets_a0",
+          aname: "vets",
+          atype: "List",
+          avis: Priv,
+          ascope: Instance
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_vet_VetControllerTests",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_vet_VetControllerTests_m0",
+          mname: "helen",
+          msig: "helen()",
+          mvis: Priv,
+          mscope: Instance,
+          rtype: "Vet",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_vet_VetControllerTests_m1",
+          mname: "james",
+          msig: "james()",
+          mvis: Priv,
+          mscope: Instance,
+          rtype: "Vet",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_vet_VetControllerTests_m2",
+          mname: "setup",
+          msig: "setup()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_vet_VetControllerTests_m3",
+          mname: "showResourcesVetList",
+          msig: "showResourcesVetList()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_vet_VetControllerTests_m4",
+          mname: "showVetListHtml",
+          msig: "showVetListHtml()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+      },
+      attributes: {
+        Attribute {
+          aid: "org_springframework_samples_petclinic_vet_VetControllerTests_a0",
+          aname: "mockMvc",
+          atype: "MockMvc",
+          avis: Priv,
+          ascope: Instance
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_vet_VetControllerTests_a1",
+          aname: "vets",
+          atype: "VetRepository",
+          avis: Priv,
+          ascope: Instance
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_vet_VetTests",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_vet_VetTests_m0",
+          mname: "serialization",
+          msig: "serialization()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_service_ClinicServiceTests",
+      kind: ConcreteClass,
+      isAbstract: No,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_service_ClinicServiceTests_m0",
+          mname: "shouldAddNewVisitForPet",
+          msig: "shouldAddNewVisitForPet()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_service_ClinicServiceTests_m1",
+          mname: "shouldFindAllPetTypes",
+          msig: "shouldFindAllPetTypes()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_service_ClinicServiceTests_m2",
+          mname: "shouldFindOwnersByLastName",
+          msig: "shouldFindOwnersByLastName()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_service_ClinicServiceTests_m3",
+          mname: "shouldFindSingleOwnerWithPet",
+          msig: "shouldFindSingleOwnerWithPet()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_service_ClinicServiceTests_m4",
+          mname: "shouldFindVets",
+          msig: "shouldFindVets()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_service_ClinicServiceTests_m5",
+          mname: "shouldFindVisitsByPetId",
+          msig: "shouldFindVisitsByPetId()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_service_ClinicServiceTests_m6",
+          mname: "shouldInsertOwner",
+          msig: "shouldInsertOwner()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_service_ClinicServiceTests_m7",
+          mname: "shouldInsertPetIntoDatabaseAndGenerateId",
+          msig: "shouldInsertPetIntoDatabaseAndGenerateId()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_service_ClinicServiceTests_m8",
+          mname: "shouldUpdateOwner",
+          msig: "shouldUpdateOwner()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+        Method {
+          mid: "org_springframework_samples_petclinic_service_ClinicServiceTests_m9",
+          mname: "shouldUpdatePetName",
+          msig: "shouldUpdatePetName()",
+          mvis: Pkg,
+          mscope: Instance,
+          rtype: "void",
+          isAbstract: No
+        }
+      },
+      attributes: {
+        Attribute {
+          aid: "org_springframework_samples_petclinic_service_ClinicServiceTests_a0",
+          aname: "owners",
+          atype: "OwnerRepository",
+          avis: Prot,
+          ascope: Instance
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_service_ClinicServiceTests_a1",
+          aname: "types",
+          atype: "PetTypeRepository",
+          avis: Prot,
+          ascope: Instance
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_service_ClinicServiceTests_a2",
+          aname: "vets",
+          atype: "VetRepository",
+          avis: Prot,
+          ascope: Instance
+        }
+        Attribute {
+          aid: "org_springframework_samples_petclinic_service_ClinicServiceTests_a3",
+          aname: "pageable",
+          atype: "Pageable",
+          avis: Priv,
+          ascope: Instance
+        }
+      }
+    }
+    Class {
+      cid: "org_springframework_samples_petclinic_service_EntityUtils",
+      kind: ConcreteClass,
+      isAbstract: Yes,
+      methods: {
+        Method {
+          mid: "org_springframework_samples_petclinic_service_EntityUtils_m0",
+          mname: "getById",
+          msig: "getById(Collection, Class, int)",
+          mvis: Pub,
+          mscope: Static,
+          rtype: "T",
+          isAbstract: No
+        }
+      }
+    }
+  }
+}

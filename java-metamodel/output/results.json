@@ -1,0 +1,2642 @@
+{
+  "mode": "single",
+  "generatedAt": "Fri Apr 03 13:00:45 WEST 2026",
+  "projects": [
+    {
+      "projectName": "spring-petclinic",
+      "types": [
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.PetClinicApplication",
+          "simpleName": "PetClinicApplication",
+          "kind": "class",
+          "interfaces": [],
+          "fields": [],
+          "methods": [
+            {
+              "name": "main",
+              "returnType": "void",
+              "visibility": "public",
+              "isStatic": true,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "args",
+                  "type": "String[]"
+                }
+              ]
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.PetClinicRuntimeHints",
+          "simpleName": "PetClinicRuntimeHints",
+          "kind": "class",
+          "interfaces": [
+            "org.springframework.aot.hint.RuntimeHintsRegistrar"
+          ],
+          "fields": [],
+          "methods": [
+            {
+              "name": "registerHints",
+              "returnType": "void",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "hints",
+                  "type": "RuntimeHints"
+                },
+                {
+                  "name": "classLoader",
+                  "type": "ClassLoader"
+                }
+              ]
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.MySqlIntegrationTests",
+          "simpleName": "MySqlIntegrationTests",
+          "kind": "class",
+          "interfaces": [],
+          "fields": [
+            {
+              "name": "container",
+              "type": "MySQLContainer",
+              "visibility": "package-private",
+              "isStatic": true,
+              "isFinal": false
+            },
+            {
+              "name": "port",
+              "type": "int",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "vets",
+              "type": "VetRepository",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "builder",
+              "type": "RestTemplateBuilder",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            }
+          ],
+          "methods": [
+            {
+              "name": "findAll",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "ownerDetails",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.MysqlTestApplication",
+          "simpleName": "MysqlTestApplication",
+          "kind": "class",
+          "interfaces": [],
+          "fields": [],
+          "methods": [
+            {
+              "name": "container",
+              "returnType": "MySQLContainer",
+              "visibility": "package-private",
+              "isStatic": true,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "main",
+              "returnType": "void",
+              "visibility": "public",
+              "isStatic": true,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "args",
+                  "type": "String[]"
+                }
+              ]
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.PetClinicIntegrationTests",
+          "simpleName": "PetClinicIntegrationTests",
+          "kind": "class",
+          "interfaces": [],
+          "fields": [
+            {
+              "name": "port",
+              "type": "int",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "vets",
+              "type": "VetRepository",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "builder",
+              "type": "RestTemplateBuilder",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            }
+          ],
+          "methods": [
+            {
+              "name": "findAll",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "main",
+              "returnType": "void",
+              "visibility": "public",
+              "isStatic": true,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "args",
+                  "type": "String[]"
+                }
+              ]
+            },
+            {
+              "name": "ownerDetails",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "ownerList",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.PostgresIntegrationTests",
+          "simpleName": "PostgresIntegrationTests",
+          "kind": "class",
+          "interfaces": [],
+          "fields": [
+            {
+              "name": "port",
+              "type": "int",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "vets",
+              "type": "VetRepository",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "builder",
+              "type": "RestTemplateBuilder",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            }
+          ],
+          "methods": [
+            {
+              "name": "available",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": true,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "findAll",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "main",
+              "returnType": "void",
+              "visibility": "public",
+              "isStatic": true,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "args",
+                  "type": "String[]"
+                }
+              ]
+            },
+            {
+              "name": "ownerDetails",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.model.BaseEntity",
+          "simpleName": "BaseEntity",
+          "kind": "class",
+          "interfaces": [
+            "java.io.Serializable"
+          ],
+          "fields": [
+            {
+              "name": "id",
+              "type": "Integer",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            }
+          ],
+          "methods": [
+            {
+              "name": "getId",
+              "returnType": "Integer",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "isNew",
+              "returnType": "boolean",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "setId",
+              "returnType": "void",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "id",
+                  "type": "Integer"
+                }
+              ]
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.model.NamedEntity",
+          "simpleName": "NamedEntity",
+          "kind": "class",
+          "superClass": "org.springframework.samples.petclinic.model.BaseEntity",
+          "interfaces": [],
+          "fields": [
+            {
+              "name": "name",
+              "type": "String",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            }
+          ],
+          "methods": [
+            {
+              "name": "getName",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "setName",
+              "returnType": "void",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "name",
+                  "type": "String"
+                }
+              ]
+            },
+            {
+              "name": "toString",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.model.Person",
+          "simpleName": "Person",
+          "kind": "class",
+          "superClass": "org.springframework.samples.petclinic.model.BaseEntity",
+          "interfaces": [],
+          "fields": [
+            {
+              "name": "firstName",
+              "type": "String",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "lastName",
+              "type": "String",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            }
+          ],
+          "methods": [
+            {
+              "name": "getFirstName",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "getLastName",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "setFirstName",
+              "returnType": "void",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "firstName",
+                  "type": "String"
+                }
+              ]
+            },
+            {
+              "name": "setLastName",
+              "returnType": "void",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "lastName",
+                  "type": "String"
+                }
+              ]
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.model.ValidatorTests",
+          "simpleName": "ValidatorTests",
+          "kind": "class",
+          "interfaces": [],
+          "fields": [],
+          "methods": [
+            {
+              "name": "createValidator",
+              "returnType": "Validator",
+              "visibility": "private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "shouldNotValidateWhenFirstNameEmpty",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.owner.Owner",
+          "simpleName": "Owner",
+          "kind": "class",
+          "superClass": "org.springframework.samples.petclinic.model.Person",
+          "interfaces": [],
+          "fields": [
+            {
+              "name": "address",
+              "type": "String",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "city",
+              "type": "String",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "telephone",
+              "type": "String",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "pets",
+              "type": "List",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": true
+            }
+          ],
+          "methods": [
+            {
+              "name": "addPet",
+              "returnType": "void",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "pet",
+                  "type": "Pet"
+                }
+              ]
+            },
+            {
+              "name": "addVisit",
+              "returnType": "void",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "petId",
+                  "type": "Integer"
+                },
+                {
+                  "name": "visit",
+                  "type": "Visit"
+                }
+              ]
+            },
+            {
+              "name": "getAddress",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "getCity",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "getPet",
+              "returnType": "Pet",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "id",
+                  "type": "Integer"
+                }
+              ]
+            },
+            {
+              "name": "getPet",
+              "returnType": "Pet",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "name",
+                  "type": "String"
+                }
+              ]
+            },
+            {
+              "name": "getPet",
+              "returnType": "Pet",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "name",
+                  "type": "String"
+                },
+                {
+                  "name": "ignoreNew",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "name": "getPets",
+              "returnType": "List",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "getTelephone",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "setAddress",
+              "returnType": "void",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "address",
+                  "type": "String"
+                }
+              ]
+            },
+            {
+              "name": "setCity",
+              "returnType": "void",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "city",
+                  "type": "String"
+                }
+              ]
+            },
+            {
+              "name": "setTelephone",
+              "returnType": "void",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "telephone",
+                  "type": "String"
+                }
+              ]
+            },
+            {
+              "name": "toString",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.owner.OwnerController",
+          "simpleName": "OwnerController",
+          "kind": "class",
+          "interfaces": [],
+          "fields": [
+            {
+              "name": "VIEWS_OWNER_CREATE_OR_UPDATE_FORM",
+              "type": "String",
+              "visibility": "private",
+              "isStatic": true,
+              "isFinal": true
+            },
+            {
+              "name": "owners",
+              "type": "OwnerRepository",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": true
+            }
+          ],
+          "methods": [
+            {
+              "name": "addPaginationModel",
+              "returnType": "String",
+              "visibility": "private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "page",
+                  "type": "int"
+                },
+                {
+                  "name": "model",
+                  "type": "Model"
+                },
+                {
+                  "name": "paginated",
+                  "type": "Page"
+                }
+              ]
+            },
+            {
+              "name": "findOwner",
+              "returnType": "Owner",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "ownerId",
+                  "type": "Integer"
+                }
+              ]
+            },
+            {
+              "name": "findPaginatedForOwnersLastName",
+              "returnType": "Page",
+              "visibility": "private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "page",
+                  "type": "int"
+                },
+                {
+                  "name": "lastname",
+                  "type": "String"
+                }
+              ]
+            },
+            {
+              "name": "initCreationForm",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "initFindForm",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "initUpdateOwnerForm",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "processCreationForm",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "owner",
+                  "type": "Owner"
+                },
+                {
+                  "name": "result",
+                  "type": "BindingResult"
+                },
+                {
+                  "name": "redirectAttributes",
+                  "type": "RedirectAttributes"
+                }
+              ]
+            },
+            {
+              "name": "processFindForm",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "page",
+                  "type": "int"
+                },
+                {
+                  "name": "owner",
+                  "type": "Owner"
+                },
+                {
+                  "name": "result",
+                  "type": "BindingResult"
+                },
+                {
+                  "name": "model",
+                  "type": "Model"
+                }
+              ]
+            },
+            {
+              "name": "processUpdateOwnerForm",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "owner",
+                  "type": "Owner"
+                },
+                {
+                  "name": "result",
+                  "type": "BindingResult"
+                },
+                {
+                  "name": "ownerId",
+                  "type": "int"
+                },
+                {
+                  "name": "redirectAttributes",
+                  "type": "RedirectAttributes"
+                }
+              ]
+            },
+            {
+              "name": "setAllowedFields",
+              "returnType": "void",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "dataBinder",
+                  "type": "WebDataBinder"
+                }
+              ]
+            },
+            {
+              "name": "showOwner",
+              "returnType": "ModelAndView",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "ownerId",
+                  "type": "int"
+                }
+              ]
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.owner.OwnerRepository",
+          "simpleName": "OwnerRepository",
+          "kind": "interface",
+          "interfaces": [
+            "org.springframework.data.jpa.repository.JpaRepository"
+          ],
+          "fields": [],
+          "methods": [
+            {
+              "name": "findById",
+              "returnType": "Optional",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": true,
+              "parameters": [
+                {
+                  "name": "id",
+                  "type": "Integer"
+                }
+              ]
+            },
+            {
+              "name": "findByLastNameStartingWith",
+              "returnType": "Page",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": true,
+              "parameters": [
+                {
+                  "name": "lastName",
+                  "type": "String"
+                },
+                {
+                  "name": "pageable",
+                  "type": "Pageable"
+                }
+              ]
+            }
+          ],
+          "isAbstract": true,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.owner.Pet",
+          "simpleName": "Pet",
+          "kind": "class",
+          "superClass": "org.springframework.samples.petclinic.model.NamedEntity",
+          "interfaces": [],
+          "fields": [
+            {
+              "name": "birthDate",
+              "type": "LocalDate",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "type",
+              "type": "PetType",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "visits",
+              "type": "Set",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": true
+            }
+          ],
+          "methods": [
+            {
+              "name": "addVisit",
+              "returnType": "void",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "visit",
+                  "type": "Visit"
+                }
+              ]
+            },
+            {
+              "name": "getBirthDate",
+              "returnType": "LocalDate",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "getType",
+              "returnType": "PetType",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "getVisits",
+              "returnType": "Collection",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "setBirthDate",
+              "returnType": "void",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "birthDate",
+                  "type": "LocalDate"
+                }
+              ]
+            },
+            {
+              "name": "setType",
+              "returnType": "void",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "type",
+                  "type": "PetType"
+                }
+              ]
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.owner.PetController",
+          "simpleName": "PetController",
+          "kind": "class",
+          "interfaces": [],
+          "fields": [
+            {
+              "name": "VIEWS_PETS_CREATE_OR_UPDATE_FORM",
+              "type": "String",
+              "visibility": "private",
+              "isStatic": true,
+              "isFinal": true
+            },
+            {
+              "name": "owners",
+              "type": "OwnerRepository",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": true
+            },
+            {
+              "name": "types",
+              "type": "PetTypeRepository",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": true
+            }
+          ],
+          "methods": [
+            {
+              "name": "findOwner",
+              "returnType": "Owner",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "ownerId",
+                  "type": "int"
+                }
+              ]
+            },
+            {
+              "name": "findPet",
+              "returnType": "Pet",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "ownerId",
+                  "type": "int"
+                },
+                {
+                  "name": "petId",
+                  "type": "Integer"
+                }
+              ]
+            },
+            {
+              "name": "initCreationForm",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "owner",
+                  "type": "Owner"
+                },
+                {
+                  "name": "model",
+                  "type": "ModelMap"
+                }
+              ]
+            },
+            {
+              "name": "initOwnerBinder",
+              "returnType": "void",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "dataBinder",
+                  "type": "WebDataBinder"
+                }
+              ]
+            },
+            {
+              "name": "initPetBinder",
+              "returnType": "void",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "dataBinder",
+                  "type": "WebDataBinder"
+                }
+              ]
+            },
+            {
+              "name": "initUpdateForm",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "populatePetTypes",
+              "returnType": "Collection",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "processCreationForm",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "owner",
+                  "type": "Owner"
+                },
+                {
+                  "name": "pet",
+                  "type": "Pet"
+                },
+                {
+                  "name": "result",
+                  "type": "BindingResult"
+                },
+                {
+                  "name": "redirectAttributes",
+                  "type": "RedirectAttributes"
+                }
+              ]
+            },
+            {
+              "name": "processUpdateForm",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "owner",
+                  "type": "Owner"
+                },
+                {
+                  "name": "pet",
+                  "type": "Pet"
+                },
+                {
+                  "name": "result",
+                  "type": "BindingResult"
+                },
+                {
+                  "name": "redirectAttributes",
+                  "type": "RedirectAttributes"
+                }
+              ]
+            },
+            {
+              "name": "updatePetDetails",
+              "returnType": "void",
+              "visibility": "private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "owner",
+                  "type": "Owner"
+                },
+                {
+                  "name": "pet",
+                  "type": "Pet"
+                }
+              ]
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.owner.PetType",
+          "simpleName": "PetType",
+          "kind": "class",
+          "superClass": "org.springframework.samples.petclinic.model.NamedEntity",
+          "interfaces": [],
+          "fields": [],
+          "methods": [],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.owner.PetTypeFormatter",
+          "simpleName": "PetTypeFormatter",
+          "kind": "class",
+          "interfaces": [
+            "org.springframework.format.Formatter"
+          ],
+          "fields": [
+            {
+              "name": "types",
+              "type": "PetTypeRepository",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": true
+            }
+          ],
+          "methods": [
+            {
+              "name": "parse",
+              "returnType": "PetType",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "text",
+                  "type": "String"
+                },
+                {
+                  "name": "locale",
+                  "type": "Locale"
+                }
+              ]
+            },
+            {
+              "name": "print",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "petType",
+                  "type": "PetType"
+                },
+                {
+                  "name": "locale",
+                  "type": "Locale"
+                }
+              ]
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.owner.PetTypeRepository",
+          "simpleName": "PetTypeRepository",
+          "kind": "interface",
+          "interfaces": [
+            "org.springframework.data.jpa.repository.JpaRepository"
+          ],
+          "fields": [],
+          "methods": [
+            {
+              "name": "findPetTypes",
+              "returnType": "List",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": true,
+              "parameters": []
+            }
+          ],
+          "isAbstract": true,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.owner.PetValidator",
+          "simpleName": "PetValidator",
+          "kind": "class",
+          "interfaces": [
+            "org.springframework.validation.Validator"
+          ],
+          "fields": [
+            {
+              "name": "REQUIRED",
+              "type": "String",
+              "visibility": "private",
+              "isStatic": true,
+              "isFinal": true
+            }
+          ],
+          "methods": [
+            {
+              "name": "supports",
+              "returnType": "boolean",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "clazz",
+                  "type": "Class"
+                }
+              ]
+            },
+            {
+              "name": "validate",
+              "returnType": "void",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "obj",
+                  "type": "Object"
+                },
+                {
+                  "name": "errors",
+                  "type": "Errors"
+                }
+              ]
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.owner.Visit",
+          "simpleName": "Visit",
+          "kind": "class",
+          "superClass": "org.springframework.samples.petclinic.model.BaseEntity",
+          "interfaces": [],
+          "fields": [
+            {
+              "name": "date",
+              "type": "LocalDate",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "description",
+              "type": "String",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            }
+          ],
+          "methods": [
+            {
+              "name": "getDate",
+              "returnType": "LocalDate",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "getDescription",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "setDate",
+              "returnType": "void",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "date",
+                  "type": "LocalDate"
+                }
+              ]
+            },
+            {
+              "name": "setDescription",
+              "returnType": "void",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "description",
+                  "type": "String"
+                }
+              ]
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.owner.VisitController",
+          "simpleName": "VisitController",
+          "kind": "class",
+          "interfaces": [],
+          "fields": [
+            {
+              "name": "owners",
+              "type": "OwnerRepository",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": true
+            }
+          ],
+          "methods": [
+            {
+              "name": "initNewVisitForm",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "loadPetWithVisit",
+              "returnType": "Visit",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "ownerId",
+                  "type": "int"
+                },
+                {
+                  "name": "petId",
+                  "type": "int"
+                },
+                {
+                  "name": "model",
+                  "type": "Map"
+                }
+              ]
+            },
+            {
+              "name": "processNewVisitForm",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "owner",
+                  "type": "Owner"
+                },
+                {
+                  "name": "petId",
+                  "type": "int"
+                },
+                {
+                  "name": "visit",
+                  "type": "Visit"
+                },
+                {
+                  "name": "result",
+                  "type": "BindingResult"
+                },
+                {
+                  "name": "redirectAttributes",
+                  "type": "RedirectAttributes"
+                }
+              ]
+            },
+            {
+              "name": "setAllowedFields",
+              "returnType": "void",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "dataBinder",
+                  "type": "WebDataBinder"
+                }
+              ]
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.owner.OwnerControllerTests",
+          "simpleName": "OwnerControllerTests",
+          "kind": "class",
+          "interfaces": [],
+          "fields": [
+            {
+              "name": "TEST_OWNER_ID",
+              "type": "int",
+              "visibility": "private",
+              "isStatic": true,
+              "isFinal": true
+            },
+            {
+              "name": "mockMvc",
+              "type": "MockMvc",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "owners",
+              "type": "OwnerRepository",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            }
+          ],
+          "methods": [
+            {
+              "name": "george",
+              "returnType": "Owner",
+              "visibility": "private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "initCreationForm",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "initFindForm",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "initUpdateOwnerForm",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "processCreationFormHasErrors",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "processCreationFormSuccess",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "processFindFormByLastName",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "processFindFormNoOwnersFound",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "processFindFormSuccess",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "processUpdateOwnerFormHasErrors",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "processUpdateOwnerFormSuccess",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "processUpdateOwnerFormUnchangedSuccess",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "processUpdateOwnerFormWithIdMismatch",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "setup",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "showOwner",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.owner.PetControllerTests",
+          "simpleName": "PetControllerTests",
+          "kind": "class",
+          "interfaces": [],
+          "fields": [
+            {
+              "name": "TEST_OWNER_ID",
+              "type": "int",
+              "visibility": "private",
+              "isStatic": true,
+              "isFinal": true
+            },
+            {
+              "name": "TEST_PET_ID",
+              "type": "int",
+              "visibility": "private",
+              "isStatic": true,
+              "isFinal": true
+            },
+            {
+              "name": "mockMvc",
+              "type": "MockMvc",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "owners",
+              "type": "OwnerRepository",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "types",
+              "type": "PetTypeRepository",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            }
+          ],
+          "methods": [
+            {
+              "name": "initCreationForm",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "processCreationFormSuccess",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "processUpdateFormSuccess",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "setup",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.owner.PetTypeFormatterTests",
+          "simpleName": "PetTypeFormatterTests",
+          "kind": "class",
+          "interfaces": [],
+          "fields": [
+            {
+              "name": "types",
+              "type": "PetTypeRepository",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "petTypeFormatter",
+              "type": "PetTypeFormatter",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            }
+          ],
+          "methods": [
+            {
+              "name": "makePetTypes",
+              "returnType": "List",
+              "visibility": "private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "setup",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "shouldParse",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "shouldThrowParseException",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "testPrint",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.owner.PetValidatorTests",
+          "simpleName": "PetValidatorTests",
+          "kind": "class",
+          "interfaces": [],
+          "fields": [
+            {
+              "name": "petValidator",
+              "type": "PetValidator",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "pet",
+              "type": "Pet",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "petType",
+              "type": "PetType",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "errors",
+              "type": "Errors",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "petName",
+              "type": "String",
+              "visibility": "private",
+              "isStatic": true,
+              "isFinal": true
+            },
+            {
+              "name": "petTypeName",
+              "type": "String",
+              "visibility": "private",
+              "isStatic": true,
+              "isFinal": true
+            },
+            {
+              "name": "petBirthDate",
+              "type": "LocalDate",
+              "visibility": "private",
+              "isStatic": true,
+              "isFinal": true
+            }
+          ],
+          "methods": [
+            {
+              "name": "setUp",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "validate",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.owner.VisitControllerTests",
+          "simpleName": "VisitControllerTests",
+          "kind": "class",
+          "interfaces": [],
+          "fields": [
+            {
+              "name": "TEST_OWNER_ID",
+              "type": "int",
+              "visibility": "private",
+              "isStatic": true,
+              "isFinal": true
+            },
+            {
+              "name": "TEST_PET_ID",
+              "type": "int",
+              "visibility": "private",
+              "isStatic": true,
+              "isFinal": true
+            },
+            {
+              "name": "mockMvc",
+              "type": "MockMvc",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "owners",
+              "type": "OwnerRepository",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            }
+          ],
+          "methods": [
+            {
+              "name": "init",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "initNewVisitForm",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "processNewVisitFormHasErrors",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "processNewVisitFormSuccess",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.system.CacheConfiguration",
+          "simpleName": "CacheConfiguration",
+          "kind": "class",
+          "interfaces": [],
+          "fields": [],
+          "methods": [
+            {
+              "name": "cacheConfiguration",
+              "returnType": "Configuration",
+              "visibility": "private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "petclinicCacheConfigurationCustomizer",
+              "returnType": "JCacheManagerCustomizer",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.system.CrashController",
+          "simpleName": "CrashController",
+          "kind": "class",
+          "interfaces": [],
+          "fields": [],
+          "methods": [
+            {
+              "name": "triggerException",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.system.WebConfiguration",
+          "simpleName": "WebConfiguration",
+          "kind": "class",
+          "interfaces": [
+            "org.springframework.web.servlet.config.annotation.WebMvcConfigurer"
+          ],
+          "fields": [],
+          "methods": [
+            {
+              "name": "addInterceptors",
+              "returnType": "void",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "registry",
+                  "type": "InterceptorRegistry"
+                }
+              ]
+            },
+            {
+              "name": "localeChangeInterceptor",
+              "returnType": "LocaleChangeInterceptor",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "localeResolver",
+              "returnType": "LocaleResolver",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.system.WelcomeController",
+          "simpleName": "WelcomeController",
+          "kind": "class",
+          "interfaces": [],
+          "fields": [],
+          "methods": [
+            {
+              "name": "welcome",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.system.CrashControllerIntegrationTests",
+          "simpleName": "CrashControllerIntegrationTests",
+          "kind": "class",
+          "interfaces": [],
+          "fields": [
+            {
+              "name": "port",
+              "type": "int",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "rest",
+              "type": "TestRestTemplate",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            }
+          ],
+          "methods": [
+            {
+              "name": "triggerExceptionHtml",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "triggerExceptionJson",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.system.CrashControllerTests",
+          "simpleName": "CrashControllerTests",
+          "kind": "class",
+          "interfaces": [],
+          "fields": [
+            {
+              "name": "testee",
+              "type": "CrashController",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isFinal": true
+            }
+          ],
+          "methods": [
+            {
+              "name": "triggerException",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.system.I18nPropertiesSyncTest",
+          "simpleName": "I18nPropertiesSyncTest",
+          "kind": "class",
+          "interfaces": [],
+          "fields": [
+            {
+              "name": "I18N_DIR",
+              "type": "String",
+              "visibility": "private",
+              "isStatic": true,
+              "isFinal": true
+            },
+            {
+              "name": "BASE_NAME",
+              "type": "String",
+              "visibility": "private",
+              "isStatic": true,
+              "isFinal": true
+            },
+            {
+              "name": "PROPERTIES",
+              "type": "String",
+              "visibility": "public",
+              "isStatic": true,
+              "isFinal": true
+            },
+            {
+              "name": "HTML_TEXT_LITERAL",
+              "type": "Pattern",
+              "visibility": "private",
+              "isStatic": true,
+              "isFinal": true
+            },
+            {
+              "name": "BRACKET_ONLY",
+              "type": "Pattern",
+              "visibility": "private",
+              "isStatic": true,
+              "isFinal": true
+            },
+            {
+              "name": "HAS_TH_TEXT_ATTRIBUTE",
+              "type": "Pattern",
+              "visibility": "private",
+              "isStatic": true,
+              "isFinal": true
+            }
+          ],
+          "methods": [
+            {
+              "name": "checkI18nPropertyFilesAreInSync",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "checkNonInternationalizedStrings",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.vet.Specialty",
+          "simpleName": "Specialty",
+          "kind": "class",
+          "superClass": "org.springframework.samples.petclinic.model.NamedEntity",
+          "interfaces": [],
+          "fields": [],
+          "methods": [],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.vet.Vet",
+          "simpleName": "Vet",
+          "kind": "class",
+          "superClass": "org.springframework.samples.petclinic.model.Person",
+          "interfaces": [],
+          "fields": [
+            {
+              "name": "specialties",
+              "type": "Set",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            }
+          ],
+          "methods": [
+            {
+              "name": "addSpecialty",
+              "returnType": "void",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "specialty",
+                  "type": "Specialty"
+                }
+              ]
+            },
+            {
+              "name": "getNrOfSpecialties",
+              "returnType": "int",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "getSpecialties",
+              "returnType": "List",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "getSpecialtiesInternal",
+              "returnType": "Set",
+              "visibility": "protected",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.vet.VetController",
+          "simpleName": "VetController",
+          "kind": "class",
+          "interfaces": [],
+          "fields": [
+            {
+              "name": "vetRepository",
+              "type": "VetRepository",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": true
+            }
+          ],
+          "methods": [
+            {
+              "name": "addPaginationModel",
+              "returnType": "String",
+              "visibility": "private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "page",
+                  "type": "int"
+                },
+                {
+                  "name": "paginated",
+                  "type": "Page"
+                },
+                {
+                  "name": "model",
+                  "type": "Model"
+                }
+              ]
+            },
+            {
+              "name": "findPaginated",
+              "returnType": "Page",
+              "visibility": "private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "page",
+                  "type": "int"
+                }
+              ]
+            },
+            {
+              "name": "showResourcesVetList",
+              "returnType": "Vets",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "showVetList",
+              "returnType": "String",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "page",
+                  "type": "int"
+                },
+                {
+                  "name": "model",
+                  "type": "Model"
+                }
+              ]
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.vet.VetRepository",
+          "simpleName": "VetRepository",
+          "kind": "interface",
+          "interfaces": [
+            "org.springframework.data.repository.Repository"
+          ],
+          "fields": [],
+          "methods": [
+            {
+              "name": "findAll",
+              "returnType": "Collection",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": true,
+              "parameters": []
+            },
+            {
+              "name": "findAll",
+              "returnType": "Page",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": true,
+              "parameters": [
+                {
+                  "name": "pageable",
+                  "type": "Pageable"
+                }
+              ]
+            }
+          ],
+          "isAbstract": true,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.vet.Vets",
+          "simpleName": "Vets",
+          "kind": "class",
+          "interfaces": [],
+          "fields": [
+            {
+              "name": "vets",
+              "type": "List",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            }
+          ],
+          "methods": [
+            {
+              "name": "getVetList",
+              "returnType": "List",
+              "visibility": "public",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.vet.VetControllerTests",
+          "simpleName": "VetControllerTests",
+          "kind": "class",
+          "interfaces": [],
+          "fields": [
+            {
+              "name": "mockMvc",
+              "type": "MockMvc",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "vets",
+              "type": "VetRepository",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": false
+            }
+          ],
+          "methods": [
+            {
+              "name": "helen",
+              "returnType": "Vet",
+              "visibility": "private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "james",
+              "returnType": "Vet",
+              "visibility": "private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "setup",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "showResourcesVetList",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "showVetListHtml",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.vet.VetTests",
+          "simpleName": "VetTests",
+          "kind": "class",
+          "interfaces": [],
+          "fields": [],
+          "methods": [
+            {
+              "name": "serialization",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.service.ClinicServiceTests",
+          "simpleName": "ClinicServiceTests",
+          "kind": "class",
+          "interfaces": [],
+          "fields": [
+            {
+              "name": "owners",
+              "type": "OwnerRepository",
+              "visibility": "protected",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "types",
+              "type": "PetTypeRepository",
+              "visibility": "protected",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "vets",
+              "type": "VetRepository",
+              "visibility": "protected",
+              "isStatic": false,
+              "isFinal": false
+            },
+            {
+              "name": "pageable",
+              "type": "Pageable",
+              "visibility": "private",
+              "isStatic": false,
+              "isFinal": true
+            }
+          ],
+          "methods": [
+            {
+              "name": "shouldAddNewVisitForPet",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "shouldFindAllPetTypes",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "shouldFindOwnersByLastName",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "shouldFindSingleOwnerWithPet",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "shouldFindVets",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "shouldFindVisitsByPetId",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "shouldInsertOwner",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "shouldInsertPetIntoDatabaseAndGenerateId",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "shouldUpdateOwner",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            },
+            {
+              "name": "shouldUpdatePetName",
+              "returnType": "void",
+              "visibility": "package-private",
+              "isStatic": false,
+              "isAbstract": false,
+              "parameters": []
+            }
+          ],
+          "isAbstract": false,
+          "isFinal": false
+        },
+        {
+          "qualifiedName": "org.springframework.samples.petclinic.service.EntityUtils",
+          "simpleName": "EntityUtils",
+          "kind": "class",
+          "interfaces": [],
+          "fields": [],
+          "methods": [
+            {
+              "name": "getById",
+              "returnType": "T",
+              "visibility": "public",
+              "isStatic": true,
+              "isAbstract": false,
+              "parameters": [
+                {
+                  "name": "entities",
+                  "type": "Collection"
+                },
+                {
+                  "name": "entityClass",
+                  "type": "Class"
+                },
+                {
+                  "name": "entityId",
+                  "type": "int"
+                }
+              ]
+            }
+          ],
+          "isAbstract": true,
+          "isFinal": false
+        }
+      ]
+    }
+  ]
+}

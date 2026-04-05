@@ -1,0 +1,348 @@
+package com.verification;
+
+import eu.modelwriter.core.alloyinecore.recognizer.AlloyInEcoreLexer;
+import eu.modelwriter.core.alloyinecore.recognizer.AlloyInEcoreParser;
+import org.antlr.v4.runtime.*;
+import org.eclipse.emf.common.util.URI;
+import org.eclipse.emf.ecore.EPackage;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+/**
+ * AlloyInEcore Verification Pipeline.
+ *
+ * Usage:
+ *   ./run.sh -i <instance.json>              (uses default .recore)
+ *   ./run.sh -r <model.recore> -i <file>     (custom .recore)
+ *   ./run.sh --help
+ *
+ * All generated files go to output/ by default.
+ */
+public class Main {
+
+    private static final String DEFAULT_OUTPUT_DIR = "output";
+
+    public static void main(String[] args) {
+        String recorePath = "src/main/resources/ClassHierarchies.recore";
+        String instancePath = null;
+        String outputDir = DEFAULT_OUTPUT_DIR;
+        boolean help = false;
+        boolean details = false;
+        String reportPath = null;
+
+        for (int i = 0; i < args.length; i++) {
+            switch (args[i]) {
+                case "-r": case "--recore":
+                    if (i + 1 < args.length) recorePath = args[++i];
+                    break;
+                case "-i": case "--instance":
+                    if (i + 1 < args.length) instancePath = args[++i];
+                    break;
+                case "-o": case "--output":
+                    if (i + 1 < args.length) outputDir = args[++i];
+                    break;
+                case "--details":
+                    details = true;
+                    break;
+                case "--report":
+                    if (i + 1 < args.length) reportPath = args[++i];
+                    break;
+                case "-h": case "--help":
+                    help = true;
+                    break;
+            }
+        }
+
+        if (help) {
+            System.out.println("AlloyInEcore Verification Pipeline");
+            System.out.println("Usage: ./run.sh [options]");
+            System.out.println("  -r, --recore <path>    Path to .recore metamodel (default: ClassHierarchies.recore)");
+            System.out.println("  -i, --instance <path>  Path to instance model (.json, .aie, .xmi)");
+            System.out.println("  -o, --output <dir>     Output directory (default: output/)");
+            System.out.println("      --details          Print broken rules (UNSAT core) when UNSAT");
+            System.out.println("      --report <path>    Write JSON report (SAT/UNSAT + violations)");
+            System.out.println("  -h, --help             Show this help");
+            return;
+        }
+
+        // Track summary fields
+        String summaryMetamodel = recorePath;
+        String summaryInstance = instancePath != null ? instancePath : "(none)";
+        String summaryEcore = "";
+        String summaryMappedAie = "";
+        String summaryResult = "SKIPPED";
+        String summarySolverOutput = "";
+
+        try {
+            // Ensure output directory exists
+            File outDir = new File(outputDir);
+            outDir.mkdirs();
+
+            // ─── Step 1: Read .recore ───
+            File recoreFile = new File(recorePath);
+            if (!recoreFile.exists()) {
+                System.err.println("ERROR: .recore not found: " + recorePath);
+                return;
+            }
+            System.out.println("[1/3] Parsing metamodel: " + recoreFile.getName());
+            String source = new String(Files.readAllBytes(Paths.get(recoreFile.getAbsolutePath())));
+
+            // ─── Step 2: Parse with AlloyInEcore ───
+            CharStream input = CharStreams.fromString(source);
+            AlloyInEcoreLexer lexer = new AlloyInEcoreLexer(input);
+            CommonTokenStream tokens = new CommonTokenStream(lexer);
+
+            // On Windows, absolute paths contain backslashes; using java.net.URI ensures
+            // a normalized file:/C:/... URI that EMF can reliably resolve.
+            URI recoreURI = URI.createURI(recoreFile.toURI().toString());
+            AlloyInEcoreParser parser = new AlloyInEcoreParser(tokens, recoreURI);
+
+            parser.removeErrorListeners();
+            parser.addErrorListener(new BaseErrorListener() {
+                @Override
+                public void syntaxError(Recognizer<?, ?> recognizer, Object offendingSymbol,
+                                        int line, int charPositionInLine, String msg,
+                                        RecognitionException e) {
+                    System.err.println("  PARSE ERROR line " + line + ":" + charPositionInLine + " " + msg);
+                }
+            });
+
+            // Suppress verbose parser output
+        java.io.PrintStream originalOut = System.out;
+        java.io.PrintStream originalErr = System.err;
+        java.io.PrintStream nullStream = new java.io.PrintStream(new java.io.OutputStream() { public void write(int b) {} });
+        System.setOut(nullStream);
+        System.setErr(nullStream);
+        try {
+            parser.model(null);
+        } finally {
+            System.setOut(originalOut);
+            System.setErr(originalErr);
+        }
+            if (parser.model == null) {
+                System.err.println("ERROR: Parser returned null model.");
+                return;
+            }
+
+            EPackage ePackage = (EPackage) parser.model.getOwnedPackage().getEObject();
+
+            // ── Patch broken ECore schema (enum types not resolved by AlloyInEcore) ──
+            patchEcoreSchema(ePackage);
+
+            org.eclipse.emf.ecore.util.EcoreUtil.resolveAll(ePackage);
+            EPackage.Registry.INSTANCE.put(ePackage.getNsURI(), ePackage);
+
+            // Save .ecore to output/
+            String baseName = recoreFile.getName().replace(".recore", "");
+            String absOutputDir = outDir.getAbsolutePath() + File.separator;
+            
+            System.setOut(nullStream);
+            System.setErr(nullStream);
+            try {
+                parser.saveResource(baseName, absOutputDir);
+                org.eclipse.emf.ecore.util.EcoreUtil.resolveAll(ePackage);
+            } finally {
+                System.setOut(originalOut);
+                System.setErr(originalErr);
+            }
+
+            String ecoreFile = absOutputDir + baseName + ".ecore";
+            summaryEcore = ecoreFile;
+            System.out.println("      → " + ecoreFile);
+
+            // ─── Step 3: Verify instance (optional) ───
+            if (instancePath != null) {
+                // Auto-map JSON to AIE
+                if (instancePath.endsWith(".json")) {
+                    System.out.println("[2/3] Mapping JSON → AIE instance...");
+                    String mappedAie = absOutputDir + "MappedInstance.aie";
+                    com.verification.mapper.JsonToAieMapper.map(instancePath, mappedAie);
+                    summaryMappedAie = mappedAie;
+                    instancePath = mappedAie;
+                    System.out.println("      → " + mappedAie);
+                }
+
+                System.out.println("[3/3] Verifying invariants...");
+                String ecoreAbsPath = new File(ecoreFile).getAbsolutePath();
+                if (details || reportPath != null) {
+                    VerificationReport report = new VerificationReport();
+                    VerificationReport finalReport = InvariantChecker.checkWithReport(instancePath, ecoreAbsPath, absOutputDir, report);
+                    summaryResult = finalReport.result;
+
+                    enrichInvariantNames(finalReport, recorePath);
+
+                    if (details) {
+                        printBrokenRules(finalReport);
+                    }
+                    if (reportPath != null) {
+                        writeReportJson(finalReport, reportPath);
+                    }
+                } else {
+                    String result = InvariantChecker.check(instancePath, ecoreAbsPath, absOutputDir);
+                    summaryResult = result;
+                }
+            } else {
+                System.out.println("[2/3] Skipped (no instance provided)");
+                System.out.println("[3/3] Skipped");
+            }
+
+        } catch (Throwable t) {
+            summaryResult = "ERROR (" + t.getClass().getSimpleName() + ")";
+            System.err.println("\nERROR: Verification failed with throwable:");
+            t.printStackTrace(System.err);
+        } finally {
+            // ─── Summary ───
+            System.out.println();
+            System.out.println("══════════════════════════════════════════");
+            System.out.println("  VERIFICATION SUMMARY");
+            System.out.println("══════════════════════════════════════════");
+            System.out.println("  Metamodel:    " + summaryMetamodel);
+            System.out.println("  Instance:     " + summaryInstance);
+            System.out.println("  .ecore:       " + summaryEcore);
+            if (!summaryMappedAie.isEmpty())
+                System.out.println("  Mapped .aie:  " + summaryMappedAie);
+            System.out.println("  Result:       " + summaryResult);
+            System.out.println("  Output dir:   " + new File(outputDir).getAbsolutePath());
+            System.out.println("══════════════════════════════════════════");
+
+            // Force exit to prevent EMF background threads from printing InterruptedException,
+            // but propagate failure to the caller.
+            int exitCode = (summaryResult != null && summaryResult.startsWith("ERROR")) ? 1 : 0;
+            System.exit(exitCode);
+        }
+    }
+
+    private static void printBrokenRules(VerificationReport report) {
+        if (report == null || !"UNSAT".equals(report.result)) {
+            return;
+        }
+        if (report.violations == null || report.violations.isEmpty()) {
+            System.out.println("\nBroken rules: (no UNSAT core details available)");
+            return;
+        }
+        System.out.println("\nBroken rules (UNSAT core):");
+        for (VerificationReport.Violation v : report.violations) {
+            String where = (v.line != null) ? ("line " + v.line) : "(unknown line)";
+            String name = (v.invariantName != null && !v.invariantName.trim().isEmpty())
+                    ? v.invariantName.trim()
+                    : null;
+            String desc = (v.description != null && !v.description.trim().isEmpty())
+                    ? v.description.trim()
+                    : (v.formula != null ? v.formula : "(no description)");
+            if (name != null) {
+                System.out.println("  - " + where + ": " + name + " — " + desc);
+            } else {
+                System.out.println("  - " + where + ": " + desc);
+            }
+        }
+    }
+
+    private static void enrichInvariantNames(VerificationReport report, String recorePath) {
+        if (report == null || report.violations == null || report.violations.isEmpty()) {
+            return;
+        }
+        if (recorePath == null || recorePath.trim().isEmpty()) {
+            return;
+        }
+
+        File recoreFile = new File(recorePath);
+        if (!recoreFile.exists()) {
+            return;
+        }
+
+        final Pattern invPattern = Pattern.compile("^\\s*invariant\\s+([A-Za-z_][A-Za-z0-9_]*)\\s*:");
+
+        try {
+            List<String> lines = Files.readAllLines(Paths.get(recoreFile.getAbsolutePath()), StandardCharsets.UTF_8);
+
+            for (VerificationReport.Violation v : report.violations) {
+                if (v == null || v.invariantName != null) {
+                    continue;
+                }
+                if (v.line == null || v.line < 1 || v.line > lines.size()) {
+                    continue;
+                }
+
+                int idx = v.line - 1;
+                String found = null;
+                // Search backwards a bit in case formatting spans lines.
+                for (int i = idx; i >= 0 && i >= idx - 10; i--) {
+                    String s = lines.get(i);
+                    Matcher m = invPattern.matcher(s);
+                    if (m.find()) {
+                        found = m.group(1);
+                        break;
+                    }
+                }
+                v.invariantName = found;
+            }
+        } catch (IOException ignored) {
+            // Best-effort enrichment; keep report usable even if file reading fails.
+        }
+    }
+
+    private static void writeReportJson(VerificationReport report, String reportPath) throws IOException {
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        File out = new File(reportPath);
+        File parent = out.getAbsoluteFile().getParentFile();
+        if (parent != null && !parent.exists() && !parent.mkdirs()) {
+            throw new IOException("Failed to create report directory: " + parent);
+        }
+        Files.write(Paths.get(out.getAbsolutePath()), gson.toJson(report).getBytes(StandardCharsets.UTF_8));
+        System.out.println("\nWrote report: " + out.getAbsolutePath());
+    }
+
+    /**
+     * Fix enum types that AlloyInEcore's parser leaves unresolved in the generated EPackage.
+     */
+    private static void patchEcoreSchema(EPackage ePackage) {
+        org.eclipse.emf.ecore.EClass cMethod = (org.eclipse.emf.ecore.EClass) ePackage.getEClassifier("Method");
+        if (cMethod != null) {
+            cMethod.getEStructuralFeature("mvis").setEType(ePackage.getEClassifier("Visibility"));
+            cMethod.getEStructuralFeature("mscope").setEType(ePackage.getEClassifier("Scope"));
+            cMethod.getEStructuralFeature("isAbstract").setEType(ePackage.getEClassifier("YesNo"));
+        }
+
+        org.eclipse.emf.ecore.EClass cAttribute = (org.eclipse.emf.ecore.EClass) ePackage.getEClassifier("Attribute");
+        if (cAttribute != null) {
+            cAttribute.getEStructuralFeature("avis").setEType(ePackage.getEClassifier("Visibility"));
+            cAttribute.getEStructuralFeature("ascope").setEType(ePackage.getEClassifier("Scope"));
+        }
+
+        org.eclipse.emf.ecore.EClass cClass = (org.eclipse.emf.ecore.EClass) ePackage.getEClassifier("Class");
+        if (cClass != null) {
+            cClass.getEStructuralFeature("kind").setEType(ePackage.getEClassifier("ClassKind"));
+            cClass.getEStructuralFeature("isAbstract").setEType(ePackage.getEClassifier("YesNo"));
+            cClass.getEStructuralFeature("parents").setEType(cClass);
+            cClass.getEStructuralFeature("attributes").setEType(cAttribute);
+            cClass.getEStructuralFeature("methods").setEType(cMethod);
+            cClass.getEStructuralFeature("iattributes").setEType(cAttribute);
+            cClass.getEStructuralFeature("imethods").setEType(cMethod);
+            cClass.getEStructuralFeature("implementation").setEType(ePackage.getEClassifier("MethodImpl"));
+        }
+
+        org.eclipse.emf.ecore.EClass cMethodImpl = (org.eclipse.emf.ecore.EClass) ePackage.getEClassifier("MethodImpl");
+        if (cMethodImpl != null) {
+            cMethodImpl.getEStructuralFeature("method").setEType(cMethod);
+            cMethodImpl.getEStructuralFeature("body").setEType(ePackage.getEClassifier("MethodBody"));
+        }
+
+        // JSON→AIE mapping uses a synthetic Root container; ensure its reference types are set.
+        org.eclipse.emf.ecore.EClass cRoot = (org.eclipse.emf.ecore.EClass) ePackage.getEClassifier("Root");
+        if (cRoot != null && cClass != null) {
+            org.eclipse.emf.ecore.EStructuralFeature contents = cRoot.getEStructuralFeature("contents");
+            if (contents != null && contents.getEType() == null) {
+                contents.setEType(cClass);
+            }
+        }
+    }
+}
