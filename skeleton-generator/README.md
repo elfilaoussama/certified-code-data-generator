@@ -108,7 +108,3 @@ The tool will automatically inject the metadata describing exactly how many stru
 ```powershell
 .\run.ps1 --classes 4 --methods 5 --attributes 2 --max-coupling 0 --instances 1 --format txt
 ```
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
